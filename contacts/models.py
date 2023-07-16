@@ -12,5 +12,5 @@ class Contact(models.Model):
         verbose_name_plural = 'Контакты'
 
     def __str__(self):
-        return '{}'.format(self.email)
+        return '{}'.format(self.city)
 

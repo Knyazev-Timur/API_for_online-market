@@ -59,6 +59,7 @@ class ManufacturerUpdateSerializer(serializers.ModelSerializer):
     # )
 
     id = serializers.PrimaryKeyRelatedField(read_only=True)
+    debt = serializers.DecimalField(max_digits=255, decimal_places=2, default=0, read_only=True)
 
 
     class Meta:
