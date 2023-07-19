@@ -3,12 +3,9 @@ from django.db import models
 
 
 class Product(models.Model):
-    name = models.CharField(max_length=255)
-    sample = models.CharField(max_length=255) #Модель, чтоб не путать с Model Django
-    # is_active = models.BooleanField(default=True)
-    created = models.DateField(auto_now=False, auto_now_add=False)
-    # supplier = models.ForeignKey(User, on_delete=models.CASCADE, null=True) # Поставщик = предыдущий владелец
-    # owner = models.ForeignKey(User, on_delete=models.CASCADE, null=True) # Ткущий владелец перейдет в Suppler при передаче товара другому
+    name = models.CharField(max_length=255, verbose_name="Наименование")
+    sample = models.CharField(max_length=255, verbose_name="Модель")
+    created = models.DateField(auto_now=False, auto_now_add=False, verbose_name="Дата создания")
 
     class Meta:
         verbose_name = 'Продукт'

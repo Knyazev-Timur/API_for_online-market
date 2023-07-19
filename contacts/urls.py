@@ -8,5 +8,4 @@ urlpatterns = [
     path('<int:pk>/', views.ContactDetailView.as_view()),
     path('<int:pk>/update/', views.ContactUpdateView.as_view()),
     path('<int:pk>/delete/', views.ContactDeleteView.as_view()),
-    # path('by_product/', views.ProductManufacturerDetailView.as_view()),
 ]

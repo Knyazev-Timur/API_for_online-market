@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Contact(models.Model):
     email = models.EmailField(max_length=255, unique=True)
     country = models.CharField(max_length=255, null=True, blank=True)
@@ -12,5 +13,5 @@ class Contact(models.Model):
         verbose_name_plural = 'Контакты'
 
     def __str__(self):
+        """фильтрация по городу в админке"""
         return '{}'.format(self.city)
-
